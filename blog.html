@@ -45,9 +45,9 @@
           <!-- 側邊欄 -->
           <div class="col-12 col-sm-4 vstack gap-3">
             <!-- 更多文章 -->
-            <div class="vstack gap-3 p-3 bg-white rounded-4 border border-2">
+            <div class="vstack gap-3 p-3 bg-white rounded-4 border border-2 shadow flex-grow-0">
               <h2 class="text-center">更多文章</h2>
-              <div class="order-2 d-flex flex-column" style="height: 200px">
+              <div class="order-2 d-flex flex-column" style="height: 120px">
                 <h5 class="mb-auto">加強網頁互動！Bootstrap Modal 教學</h5>
                 <small>2023/5/19</small>
                 <div>10人看過</div>
@@ -60,7 +60,7 @@
                   Bootstrap的強大按鈕元件，我們可以輕鬆打造出各種吸引人的互動元素～
                 </div>
               </div>
-              <div class="vstack gap-1 order-1 justify-content-between" style="height: 200px">
+              <div class="vstack gap-1 order-1 justify-content-between" style="height: 160px">
                 <h5>簡化表單設計！Bootstrap Form 教學</h5>
                 <div>
                   <small>2023/5/18</small>
@@ -69,9 +69,12 @@
               </div>
             </div>
             <!-- 關於我 -->
-            <div class="vstack gap-3 p-3 bg-white rounded-4 border border-2 text-center">
+            <!-- d-flex flex-column -->
+            <div class="vstack gap-3 p-3 bg-white rounded-4 border border-2 text-center flex-grow-0">
               <h2>關於我</h2>
-              <img src="./1.jpeg" alt="" class="rounded-circle" />
+              <div class="rounded-circle overflow-hidden align-self-center ratio ratio-1x1" style="width: 120px">
+                <img src="./1.jpeg" alt="" class="object-fit-cover w-100 h-100" />
+              </div>
               <strong class="text-primary text-uppercase fs-5">Allie Xiao</strong>
               <div class="text-bg-primary rounded-pill p-2 fst-italic">前端工程師</div>
               <dl class="row text-start">
