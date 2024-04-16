@@ -80,6 +80,14 @@
                 </table>
               </div>
               <h2>留個言吧</h2>
+              <div class="form-floating mb-3">
+                <input type="text" class="form-control" id="nameInput" placeholder="" />
+                <label for="nameInput">姓名或暱稱</label>
+              </div>
+              <div class="input-group mb-3">
+                <input type="text" class="form-control" placeholder="email" />
+                <span class="input-group-text">@gmail.com</span>
+              </div>
               <div class="mb-3">
                 <label for="moreInput" class="form-label">還想了解關於Bootstrap的...</label>
                 <input class="form-control" list="moreList" id="moreInput" placeholder="請輸入..." />
@@ -88,6 +96,10 @@
                   <option value="Button">按鈕</option>
                   <option value="Modal">模式對話框</option>
                 </datalist>
+              </div>
+              <div class="form-check form-switch mb-3">
+                <input class="form-check-input" type="checkbox" role="switch" id="subscribeCheckbox" checked />
+                <label class="form-check-label" for="subscribeCheckbox">是否訂閱電子報</label>
               </div>
             </div>
           </div>
