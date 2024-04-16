@@ -56,5 +56,3 @@ Blog：
 | 1          | 網格        | Grid      | Bootstrap的佈局系統，用於創建靈活的網頁佈局  | https://getbootstrap.com/docs/5.3/layout/grid/
 | 2          | 按鈕        | Button    | 使用不同樣式和大小的按鈕增加互動性和功能      | https://getbootstrap.com/docs/5.3/components/buttons/
 | 3          | 模式對話框  | Modal     | 創建視窗對話框，用於顯示詳細內容或進行操作     | https://getbootstrap.com/docs/5.3/components/modal/
-| 4          | 圖片        | Image     | 輕鬆添加圖片到網頁並進行適當的調整和排版      | https://getbootstrap.com/docs/5.3/content/images/
-| 5          | 表格        | Table     | 建立具有排序和過濾功能的美觀表格，展示數據內容      | https://getbootstrap.com/docs/5.3/content/tables/
