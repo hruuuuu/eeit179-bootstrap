@@ -61,7 +61,28 @@
           <!-- 內容 -->
           <div class="col-12 col-sm-8">
             <div class="p-3 bg-white rounded-4" id="top">
-              <img src="https://pbs.twimg.com/media/FMsHg-cacAA2zMc.jpg" alt="" class="img-fluid" />
+              <!-- carousel -->
+              <div id="carousel" class="carousel slide rounded overflow-hidden">
+                <div class="carousel-inner">
+                  <div class="carousel-item active ratio ratio-4x3">
+                    <img src="https://pbs.twimg.com/media/FMsHg-cacAA2zMc.jpg" class="d-block w-100 h-100 object-fit-cover" alt="..." />
+                  </div>
+                  <div class="carousel-item ratio ratio-4x3">
+                    <img src="https://i.pinimg.com/736x/36/27/20/362720dccaa477779b4895bf3b828248.jpg" class="d-block w-100 h-100 object-fit-cover" alt="..." />
+                  </div>
+                  <div class="carousel-item ratio ratio-4x3">
+                    <img src="https://pbs.twimg.com/media/GLN59lYakAAb2kI.jpg" class="d-block w-100 h-100 object-fit-cover" alt="..." />
+                  </div>
+                </div>
+                <button class="carousel-control-prev" type="button" data-bs-target="#carousel" data-bs-slide="prev">
+                  <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                  <span class="visually-hidden">Previous</span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#carousel" data-bs-slide="next">
+                  <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                  <span class="visually-hidden">Next</span>
+                </button>
+              </div>
               <!-- breadcrumb -->
               <nav aria-label="breadcrumb" class="mt-3">
                 <ol class="breadcrumb">
