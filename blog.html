@@ -258,17 +258,21 @@
                 <div id="alert"></div>
               </div>
               <!-- toast -->
-              <button type="button" class="btn btn-danger" id="toastBtn">toast想跟你打招呼</button>
-              <div class="toast-container position-fixed bottom-0 end-0 p-3">
-                <div id="toast" class="toast" role="alert" aria-live="assertive" aria-atomic="true">
-                  <div class="toast-header">
-                    <strong class="me-auto">Toast說</strong>
-                    <small>11分鐘前</small>
-                    <button type="button" class="btn-close" data-bs-dismiss="toast" aria-label="Close"></button>
+              <div class="mb-3">
+                <button type="button" class="btn btn-danger" id="toastBtn">toast想跟你打招呼</button>
+                <div class="toast-container position-fixed bottom-0 end-0 p-3">
+                  <div id="toast" class="toast" role="alert" aria-live="assertive" aria-atomic="true">
+                    <div class="toast-header">
+                      <strong class="me-auto">Toast說</strong>
+                      <small>11分鐘前</small>
+                      <button type="button" class="btn-close" data-bs-dismiss="toast" aria-label="Close"></button>
+                    </div>
+                    <div class="toast-body">你好呀！！！</div>
                   </div>
-                  <div class="toast-body">你好呀！！！</div>
                 </div>
               </div>
+              <!-- popover -->
+              <button type="button" class="btn btn-success" data-bs-toggle="popover" data-bs-title="Popover說" data-bs-content="嗨～～～">popover想跟你打招呼</button>
             </div>
           </div>
           <!-- 側邊欄 -->
@@ -365,6 +369,20 @@
         });
       }
     </script>
-    <script></script>
+    <script>
+      const toastBtnEl = document.getElementById('toastBtn');
+      const toastEl = document.getElementById('toast');
+
+      if (toastBtnEl) {
+        const toastBootstrap = bootstrap.Toast.getOrCreateInstance(toastEl);
+        toastBtnEl.addEventListener('click', () => {
+          toastBootstrap.show();
+        });
+      }
+    </script>
+    <script>
+      const popoverTriggerList = document.querySelectorAll('[data-bs-toggle="popover"]');
+      const popoverList = [...popoverTriggerList].map((item) => new bootstrap.Popover(item));
+    </script>
   </body>
 </html>
