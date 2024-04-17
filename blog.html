@@ -11,6 +11,9 @@
       crossorigin="anonymous" /> -->
     <link rel="stylesheet" href="./scss/custom.css" />
     <style>
+      html {
+        scroll-padding-top: 56px;
+      }
       .paragraph {
         white-space: pre-line;
       }
@@ -25,46 +28,39 @@
       </symbol>
     </svg>
     <!-- navbar -->
-    <nav class="navbar navbar-expand-sm bg-white shadow">
+    <nav class="navbar navbar-expand-sm bg-white shadow sticky-top" id="navbar">
       <div class="container-fluid">
         <a class="navbar-brand" href="#">Allie's blog</a>
-        <button
-          class="navbar-toggler"
-          type="button"
-          data-bs-toggle="collapse"
-          data-bs-target="#navbarSupportedContent"
-          aria-controls="navbarSupportedContent"
-          aria-expanded="false"
-          aria-label="Toggle navigation">
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
           <span class="navbar-toggler-icon"></span>
         </button>
-        <div class="collapse navbar-collapse" id="navbarSupportedContent">
-          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+        <div class="collapse navbar-collapse" id="navbarCollapse">
+          <ul class="navbar-nav nav-pills">
             <li class="nav-item">
-              <a class="nav-link active" aria-current="page" href="#">Home</a>
+              <a class="nav-link active" aria-current="page" href="#top">Top</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#">Link</a>
+              <a class="nav-link" href="#content">內文</a>
             </li>
             <li class="nav-item dropdown">
-              <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false"> Dropdown </a>
+              <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">其他</a>
               <ul class="dropdown-menu">
-                <li><a class="dropdown-item" href="#">Action</a></li>
-                <li><a class="dropdown-item" href="#">Another action</a></li>
+                <li><a class="dropdown-item" href="#tab">頁籤</a></li>
+                <li><a class="dropdown-item" href="#card">卡片</a></li>
                 <li><hr class="dropdown-divider" /></li>
-                <li><a class="dropdown-item" href="#">Something else here</a></li>
+                <li><a class="dropdown-item" href="#form">留言</a></li>
               </ul>
             </li>
           </ul>
         </div>
       </div>
     </nav>
-    <div class="container-fluid bg-body-secondary">
+    <div class="container-fluid bg-body-secondary" data-bs-spy="scroll" data-bs-target="#navbar">
       <div class="pt-4">
         <div class="row g-3">
           <!-- 內容 -->
           <div class="col-12 col-sm-8">
-            <div class="p-3 bg-white rounded-4">
+            <div class="p-3 bg-white rounded-4" id="top">
               <img src="https://pbs.twimg.com/media/FMsHg-cacAA2zMc.jpg" alt="" class="img-fluid" />
               <!-- breadcrumb -->
               <nav aria-label="breadcrumb" class="mt-3">
@@ -85,7 +81,8 @@
               </div>
               <h1 class="text-bg-primary p-2 rounded-4">Bootstrap Grid：打造網頁佈局的完美解決方案</h1>
               <!-- 內文 -->
-              <div class="paragraph mb-3">
+              <!-- <div id="content" style="position: relative; top: -56px"></div> -->
+              <div class="paragraph mb-3" id="content">
                 嘿，大家好！今天我們要一起探索<mark>Bootstrap的Grid（網格）系統</mark>，這是設計師和開發者的秘密武器，能夠輕鬆打造出令人驚艷的網頁佈局。快跟著我們一起踏上這趟有趣的旅程吧！
                 在網頁設計中，佈局是關鍵要素之一。Bootstrap的Grid系統提供了一套簡單而強大的工具，讓我們能夠有效地管理和組織網頁中的內容。
                 首先，我們要認識兩個基本元素：列和欄。列就像是網格中的一行，而欄則是列中的一個小單位。透過列和欄的組合，我們可以建立出彈性且有結構的網頁佈局。
@@ -124,7 +121,7 @@
                   </button>
                 </li>
               </ul>
-              <div class="tab-content" id="myTabContent">
+              <div class="tab-content" id="tabContent">
                 <div class="tab-pane fade show active" id="tableTabPane" role="tabpanel" aria-labelledby="tableTab" tabindex="0">
                   <!-- 表格 -->
                   <div class="table-responsive mb-3">
@@ -204,7 +201,7 @@
                 </div>
               </div>
               <!-- 卡片 -->
-              <div class="row g-3">
+              <div class="row g-3" id="card">
                 <div class="col-12 col-md-6">
                   <div class="card position-relative">
                     <div class="card-body">
@@ -257,7 +254,7 @@
                 <div class="progress-bar progress-bar-striped progress-bar-animated bg-warning" style="width: 75%"></div>
               </div>
               <!-- 表單 -->
-              <form class="my-3">
+              <form class="my-3" id="form">
                 <h2 class="text-primary fs-4">留個言吧</h2>
                 <div class="form-floating mb-3">
                   <input type="text" class="form-control" id="nameInput" placeholder="" />
@@ -317,7 +314,7 @@
           <!-- 側邊欄 -->
           <div class="col-12 col-sm-4 vstack gap-3">
             <!-- 更多文章 -->
-            <div class="vstack gap-3 p-3 bg-white rounded-4 border border-2 shadow flex-grow-0 position-sticky top-0 z-1">
+            <div class="vstack gap-3 p-3 bg-white rounded-4 border border-2 shadow flex-grow-0 position-sticky z-1" style="top: 80px">
               <h2 class="text-center text-primary fs-4">更多文章</h2>
               <div class="order-2 d-flex flex-column" style="height: 120px">
                 <h5 class="mb-auto">加強網頁互動！Bootstrap Modal 教學</h5>
